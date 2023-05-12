@@ -13,7 +13,34 @@ class StartScreen extends StatelessWidget {
             'assets/images/logo.png',
             width: 250,
           ),
-          const Text('StartScreen'),
+          const SizedBox(
+            height: 32,
+          ),
+          const Text(
+            'React Quiz',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+            ),
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          OutlinedButton.icon(
+            icon: const Icon(
+              Icons.arrow_right,
+            ),
+            label: const Text(
+              'Start Quiz',
+              style: TextStyle(
+                fontSize: 24,
+              ),
+            ),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: Colors.white,
+            ),
+            onPressed: () {},
+          )
         ],
       ),
     );
