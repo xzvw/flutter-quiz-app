@@ -5,8 +5,17 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return const Center(
-      child: Text('StartScreen'),
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset(
+            'assets/images/logo.png',
+            width: 250,
+          ),
+          const Text('StartScreen'),
+        ],
+      ),
     );
   }
 }
