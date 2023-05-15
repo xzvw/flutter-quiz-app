@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget {
   final void Function() onStartQuiz;
@@ -19,9 +20,9 @@ class StartScreen extends StatelessWidget {
           const SizedBox(
             height: 32,
           ),
-          const Text(
+          Text(
             'React Quiz',
-            style: TextStyle(
+            style: GoogleFonts.roboto(
               color: Colors.white,
               fontSize: 32,
             ),
@@ -33,9 +34,9 @@ class StartScreen extends StatelessWidget {
             icon: const Icon(
               Icons.arrow_right,
             ),
-            label: const Text(
+            label: Text(
               'Start Quiz',
-              style: TextStyle(
+              style: GoogleFonts.roboto(
                 fontSize: 24,
               ),
             ),
