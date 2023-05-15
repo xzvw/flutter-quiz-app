@@ -3,4 +3,10 @@ class QuizQuestion {
   final List<String> answerList; // the first answer is always the correct one
 
   const QuizQuestion({required this.question, required this.answerList});
+
+  List<String> getShuffledAnswerList() {
+    final listCopy = List.of(answerList);
+    listCopy.shuffle();
+    return listCopy;
+  }
 }
