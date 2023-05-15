@@ -1,6 +1,6 @@
 import 'package:flutter_quiz_app/models/quiz_question.dart';
 
-const questions = [
+const quizQuestions = [
   QuizQuestion(
     question: 'What is React JS?',
     answerList: [
