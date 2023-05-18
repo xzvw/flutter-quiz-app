@@ -45,7 +45,7 @@ class _Quiz extends State<Quiz> {
         screenWidget = QuestionScreen(onSelectAnswer);
         break;
       case 'RESULTS_SCREEN':
-        screenWidget = const ResultsScreen();
+        screenWidget = ResultsScreen(selectedAnswerList: selectedAnswerList);
         break;
     }
 
