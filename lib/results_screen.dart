@@ -25,16 +25,25 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(context) {
+    final summary = getSummary();
+
+    final numTotalQuestions = quizQuestions.length;
+    final numCorrectlyAnsweredQuestions = summary
+        .where((entry) => entry['selected_answer'] == entry['correct_answer'])
+        .length;
+
     return SizedBox(
       width: double.infinity,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text('@todo'),
+          Text(
+            'You answered $numCorrectlyAnsweredQuestions out of $numTotalQuestions',
+          ),
           const SizedBox(
             height: 32,
           ),
-          Summary(summary: getSummary()),
+          Summary(summary: summary),
           const SizedBox(
             height: 32,
           ),
