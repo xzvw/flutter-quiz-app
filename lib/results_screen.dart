@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quiz_app/data/quiz_questions.dart';
+import 'package:flutter_quiz_app/summary.dart';
 
 class ResultsScreen extends StatelessWidget {
   final List<String> selectedAnswerList;
@@ -33,7 +34,7 @@ class ResultsScreen extends StatelessWidget {
           const SizedBox(
             height: 32,
           ),
-          const Text('@todo'),
+          Summary(summary: getSummary()),
           const SizedBox(
             height: 32,
           ),
