@@ -49,14 +49,27 @@ class _QuestionScreenState extends State<QuestionScreen> {
             const SizedBox(
               height: 32,
             ),
-            ...quizQuestion.getShuffledAnswerList().map((answer) {
-              return AnswerButton(
-                text: answer,
-                onPressed: () {
-                  answerQuestion(answer);
-                },
-              );
-            }),
+            ...quizQuestion
+                .getShuffledAnswerList()
+                .asMap()
+                .entries
+                .map((entry) {
+              final index = entry.key;
+              final answer = entry.value;
+
+              return [
+                if (index > 0)
+                  const SizedBox(
+                    height: 12,
+                  ),
+                AnswerButton(
+                  text: answer,
+                  onPressed: () {
+                    answerQuestion(answer);
+                  },
+                )
+              ];
+            }).expand((list) => list)
           ],
         ),
       ),
