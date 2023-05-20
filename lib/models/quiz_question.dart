@@ -4,7 +4,7 @@ class QuizQuestion {
 
   const QuizQuestion({required this.question, required this.answerList});
 
-  List<String> getShuffledAnswerList() {
+  List<String> get shuffledAnswerList {
     final listCopy = List.of(answerList);
     listCopy.shuffle();
     return listCopy;

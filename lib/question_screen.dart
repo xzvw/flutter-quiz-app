@@ -51,7 +51,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
               height: 32,
             ),
             ...quizQuestion
-                .getShuffledAnswerList()
+                .shuffledAnswerList
                 .asMap()
                 .entries
                 .map((entry) {
