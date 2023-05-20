@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_quiz_app/summary/summary_item.dart';
+
 class Summary extends StatelessWidget {
   final List<Map<String, Object>> summary;
 
@@ -8,34 +10,12 @@ class Summary extends StatelessWidget {
   @override
   Widget build(context) {
     return SizedBox(
-      height: 300,
+      height: 480,
       child: SingleChildScrollView(
         child: Column(
           children: summary
               .map(
-                (entry) => Row(
-                  children: [
-                    Text(
-                      ((entry['index'] as int) + 1).toString(),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          entry['question'] as String,
-                          style: const TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 16,
-                        ),
-                        Text(entry['correct_answer'] as String),
-                        Text(entry['selected_answer'] as String),
-                      ],
-                    )
-                  ],
-                ),
+                (item) => SummaryItem(item),
               )
               .toList(),
         ),
