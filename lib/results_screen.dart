@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quiz_app/data/quiz_questions.dart';
-import 'package:flutter_quiz_app/summary.dart';
+import 'package:flutter_quiz_app/summary/summary.dart';
 
 class ResultsScreen extends StatelessWidget {
   final List<String> selectedAnswerList;
