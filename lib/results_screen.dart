@@ -6,7 +6,7 @@ import 'package:flutter_quiz_app/summary/summary.dart';
 
 class ResultsScreen extends StatelessWidget {
   final List<String> selectedAnswerList;
-  final onRestartQuiz;
+  final void Function() onRestartQuiz;
 
   const ResultsScreen({
     required this.selectedAnswerList,
