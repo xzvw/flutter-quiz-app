@@ -25,13 +25,13 @@ class _Quiz extends State<Quiz> {
   }
 
   void onSelectAnswer(String selectedAnswer) {
-    setState(() {
-      selectedAnswerList.add(selectedAnswer);
+    selectedAnswerList.add(selectedAnswer);
 
-      if (selectedAnswerList.length == quizQuestions.length) {
+    if (selectedAnswerList.length == quizQuestions.length) {
+      setState(() {
         activeScreen = 'RESULTS_SCREEN';
-      }
-    });
+      });
+    }
   }
 
   void onRestartQuiz() {
