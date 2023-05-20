@@ -26,6 +26,7 @@ class AnswerButton extends StatelessWidget {
             32,
           ),
         ),
+        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
       ),
       child: Text(
         text,
